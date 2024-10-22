@@ -1,4 +1,6 @@
 const fullname = 'Mohsen Farajollahi';
+const description =
+  "Mohsen Farajollahi, A Programmer|Web Developer's Personal Webpage";
 const titles = [
   'Web developer',
   'IoT enthusiast',
@@ -11,4 +13,4 @@ const contactAPI =
 const email = 'contact@mohsenfaraj.ir';
 const telegram = '@MohsenFaraj';
 const CVLink = '#';
-export { fullname, titles, contactAPI, email, telegram, CVLink };
+export { fullname, description, titles, contactAPI, email, telegram, CVLink };
