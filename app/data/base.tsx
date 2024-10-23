@@ -8,9 +8,19 @@ const titles = [
   'Blogger',
   'Programmer',
 ];
+const BASEURL = 'https://mohsenfaraj.ir';
 const contactAPI =
   'https://portfolio-contact.gmohsenfarajollahi4657.workers.dev/';
 const email = 'contact@mohsenfaraj.ir';
 const telegram = '@MohsenFaraj';
 const CVLink = '#';
-export { fullname, description, titles, contactAPI, email, telegram, CVLink };
+export {
+  fullname,
+  description,
+  titles,
+  contactAPI,
+  email,
+  telegram,
+  CVLink,
+  BASEURL,
+};
