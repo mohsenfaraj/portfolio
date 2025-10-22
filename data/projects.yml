@@ -1,0 +1,112 @@
+- name: Hamyar Vahed
+  short:
+    a next.js project for scrapping lectures data from our university website
+    (edu.uut.ac.ir) and display as a system where students could easily pick
+    lectures, check lecture time and exam collide and get exams and weekly
+    schedule
+  image: /images/hamyar.png
+  link: https://hamyar.codegeeks.ir
+  tags:
+    - web
+    - next
+    - tools
+- name: On-time
+  short:
+    a React pwa project to track and calculate the remaining time of our university's next bus stop
+    that is defined in a json file. this project even works in offline mode.
+  image: /images/ontime.png
+  link: https://mohsenfaraj.github.io/on-time
+  tags:
+    - web
+    - react
+- name: Ghaza Yad
+  short:
+    this service sends a web push notification every wednesday to students for reminding to reserve the
+    food for next week. I've used cloudflare workers for handling and sending push notifications.
+  image: /images/ghazayad.png
+  link: https://food.codegeeks.ir
+  tags:
+    - web
+    - cloudflare
+- name: imdb.js
+  short: this was a university project for the database lecture.
+    we have used express.js, mysql and ejs for creating a website like imdb.
+    this is not a finished project but it has a lot of features like liking, commenting,
+    search by director and etc
+  image: ''
+  link: https://github.com/mohsenfaraj/imdb.js
+  tags:
+    - web
+    - express
+    - mysql
+    - university
+- name: ZenDic
+  short:
+    smart english-persian and vice versa dictionary built using Java and JavaFx.
+    has features like word suggestion, quick translate based on input language, always on-top
+    and more with a fantastic UI.
+  image: /images/zendic.png
+  link: https://github.com/mohsenfaraj/ZenDic
+  tags:
+    - java
+    - javafx
+    - desktop
+    - university
+- name: ZenBook
+  short: Zenix Phone Book (ZenBook) is a simple contact manager built using java and javaFX
+  image: /images/zenbook.png
+  link: https://github.com/mohsenfaraj/ZenBook
+  tags:
+    - java
+    - javafx
+    - desktop
+    - university
+- name: Frootan blog.ir template
+  short: a minimalist optimized template for blog.ir
+  image: /images/frootan.png
+  link: https://github.com/mohsenfaraj/Frootan
+  tags:
+    - web
+- name: Pure CSS slider creator
+  short: a tool for creating pure css responsive sliders.
+    i created this tool for bloggers of blog.ir had restrictions on javascript.
+  link: https://github.com/mohsenfaraj/pureCssSlider
+  tags:
+    - web
+    - tools
+- name: Pure CSS Quiz maker
+  short: a tool for creating pure html/css quiz without any use of javascript.
+  link: https://github.com/mohsenfaraj/pure-css-quiz-maker
+  tags:
+    - web
+    - tools
+- name: Flash card maker
+  short: a simple JS app that gets pair of words and ask the user about the words like flashcard. this was my first proper js project.
+  link: https://github.com/mohsenfaraj/FlashcardMaker-fa
+  tags:
+    - web
+    - tools
+- name: lexical analyzer
+  short: Java Lexical Analyzer written in python, University's Compiler Design Assignment.
+  link: https://github.com/mohsenfaraj/LexicalAnalyzer
+  tags:
+    - university
+    - python
+- name: AzmoonYaar
+  short: final project for web development using JQuery and bootstrap.
+    with this tool you could participate at pre-defined json exams and test your knowledge.
+  link: https://github.com/mohsenfaraj/AzmoonYaar
+  tags:
+    - web
+    - university
+    - tools
+- name: tasktracker
+  short: a simple fullstack task tracker app using MERN stack and Docker. this was a university project
+  link: https://github.com/mohsenfaraj/tasktracker
+  tags:
+    - web
+    - express
+    - docker
+- name: more projects
+  short: check more projects from my github repositories
+  link: https://github.com/mohsenfaraj?tab=repositories

@@ -6,8 +6,9 @@ import { Metadata } from 'next';
 type Props = {};
 
 const Portfolio = (props: Props) => {
-  const data = loadYaml('projects.yml');
-  return <Projects categories={data.categories} projects={data.projects} />;
+  const projects = loadYaml('projects.yml');
+  const categories = loadYaml('categories.yml');
+  return <Projects categories={categories} projects={projects} />;
 };
 
 export const metadata: Metadata = {

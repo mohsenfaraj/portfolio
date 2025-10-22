@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export const loadYaml = (fileName: string) => {
-  const filePath = path.join(process.cwd(), '/app/data', fileName);
+  const filePath = path.join(process.cwd(), '/data', fileName);
   const fileContent = fs.readFileSync(filePath, 'utf8');
 
   try {
