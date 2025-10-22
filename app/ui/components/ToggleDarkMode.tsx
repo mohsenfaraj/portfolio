@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 type Props = {
@@ -33,7 +32,7 @@ const ToggleDarkMode = ({ theme, setTheme }: Props) => {
 
   return (
     <div
-      className='cursor-pointer rounded-full bg-zinc-100 p-3 text-zinc-600 dark:bg-zinc-800 dark:text-foreground'
+      className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-zinc-100 p-3 text-lg text-zinc-600 dark:bg-zinc-800 dark:text-foreground'
       onClick={toggleTheme}
     >
       {theme === 'dark' ? (
@@ -44,7 +43,7 @@ const ToggleDarkMode = ({ theme, setTheme }: Props) => {
           exit={{ rotate: 90, scale: 0.5 }} // Exit animation when toggling to moon
           transition={{ duration: 0.5 }}
         >
-          <FaSun />
+          <i className='fa fa-sun-o'></i>
         </motion.div>
       ) : (
         <motion.div
@@ -54,7 +53,7 @@ const ToggleDarkMode = ({ theme, setTheme }: Props) => {
           exit={{ rotate: -90, scale: 0.5 }} // Exit animation when toggling to sun
           transition={{ duration: 0.5 }}
         >
-          <FaMoon />
+          <i className='fa fa-moon-o'></i>
         </motion.div>
       )}
     </div>

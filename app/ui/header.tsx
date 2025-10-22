@@ -1,16 +1,15 @@
 'use client';
 import Link from 'next/link';
-import nav from '../data/nav';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import { AnimatePresence, motion } from 'framer-motion';
 import ToggleDarkMode from './components/ToggleDarkMode';
+import { navlink } from '../lib/loadNav';
 
-type Props = {};
+type Props = { nav: navlink[] };
 
-export default function Header({}: Props) {
+export default function Header({ nav }: Props) {
   const pathname = usePathname();
   const [drawerState, setDrawerState] = useState(false);
   const [theme, setTheme] = useState('dark');
@@ -104,7 +103,7 @@ export default function Header({}: Props) {
           className='rounded-full bg-zinc-100 p-3 dark:bg-zinc-800'
           onClick={() => handleDrawer(true)}
         >
-          <FaBars />
+          <i className='fa fa-bars'></i>
         </div>
       </div>
       <div className='fixed left-0 top-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
@@ -137,7 +136,7 @@ export default function Header({}: Props) {
                 animate={{ opacity: 1, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, transition: { duration: 0.3 } }}
               >
-                <FaTimes /> &nbsp; close
+                <i className='fa fa-times'></i> &nbsp; close
               </motion.span>
 
               {nav.map((item, index) => {

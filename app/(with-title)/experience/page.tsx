@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { loadYaml } from '@/app/lib/loadYaml';
 import Experience from '@/app/ui/Experience';
 import { Metadata } from 'next';
-import { fullname } from '@/app/data/base';
+import { fullname } from '@/app/lib/loadBase';
+import skills from '@/app/lib/loadSkills';
 type Props = {};
 
 const ExperiencePage = (props: Props) => {
   const timeline = loadYaml('timeline.yml');
-  return <Experience timeline={timeline} />;
+  return <Experience timeline={timeline} skills={skills} />;
 };
 export const metadata: Metadata = {
   title: 'Experience',

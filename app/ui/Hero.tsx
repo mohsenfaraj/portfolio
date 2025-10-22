@@ -5,14 +5,19 @@ import Button from './components/button';
 import Typewriter from 'typewriter-effect/dist/core';
 
 import { useEffect } from 'react';
-import socials from '../data/socials';
 import { motion } from 'framer-motion';
 import { topToBottom, leftToRight, rightToLeft } from './Animations';
 import Link from 'next/link';
-import { CVLink, fullname, titles } from '../data/base';
-type Props = {};
+import { link } from '../lib/loadSocials';
 
-const Hero = (props: Props) => {
+type Props = {
+  socials: link[];
+  titles: string[];
+  fullname: string;
+  CVLink: string;
+};
+
+const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
   useEffect(() => {
     new Typewriter('#typewriter', {
       strings: titles,
@@ -36,10 +41,16 @@ const Hero = (props: Props) => {
           {/* The Blur Effect */}
         </span>
         <div className='z-10 w-96 px-4 md:px-0'>
-          <motion.p variants={topToBottom} className='text-xl text-gray-400'>
+          <motion.p
+            variants={topToBottom}
+            className='text-xl text-gray-400 dark:text-gray-500'
+          >
             Hello There! I'm
           </motion.p>
-          <motion.p variants={topToBottom} className='mt-2 text-gray-500'>
+          <motion.p
+            variants={topToBottom}
+            className='mt-2 text-gray-500 dark:text-gray-400'
+          >
             {fullname}
           </motion.p>
           <motion.h2
@@ -60,7 +71,7 @@ const Hero = (props: Props) => {
                   target='_blank'
                   key={social.name}
                 >
-                  {<social.icon />}
+                  <i className={'fa ' + social.icon}></i>
                 </a>
               );
             })}
@@ -69,8 +80,9 @@ const Hero = (props: Props) => {
             variants={topToBottom}
             className='mt-8 flex justify-center gap-3 text-sm'
           >
-            <Link href={CVLink}></Link>
-            <Button type='gradient'>Download CV</Button>
+            <Link href={CVLink}>
+              <Button type='gradient'>Download CV</Button>
+            </Link>
             <Link href={'/contact'}>
               <Button type='outline'>Contact me</Button>
             </Link>

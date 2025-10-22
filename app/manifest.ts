@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { description, fullname } from './data/base';
+import { fullname, description } from './lib/loadBase';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {

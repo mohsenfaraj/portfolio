@@ -4,6 +4,7 @@ import React from 'react';
 import Skills from './Skills';
 import Timeline from './Timeline';
 import { topToBottom } from './Animations';
+import { skill } from '../lib/loadSkills';
 
 type timeLine = {
   title: string;
@@ -12,9 +13,10 @@ type timeLine = {
 };
 type Props = {
   timeline: timeLine[];
+  skills: skill[];
 };
 
-const Experience = ({ timeline }: Props) => {
+const Experience = ({ timeline, skills }: Props) => {
   return (
     <div>
       <motion.h2
@@ -24,9 +26,9 @@ const Experience = ({ timeline }: Props) => {
         animate='show'
         transition={{ delay: 0.3 }}
       >
-        Skills
+        [Skills]
       </motion.h2>
-      <Skills />
+      <Skills skills={skills} />
       <motion.div
         variants={topToBottom}
         initial='hidden'
@@ -35,7 +37,7 @@ const Experience = ({ timeline }: Props) => {
         transition={{ delay: 0.8 }}
       >
         <motion.h2 className='mb-5 text-center text-4xl font-bold text-primary'>
-          Time Line
+          [Time Line]
         </motion.h2>
         <div className='overflow-hidden px-2'>
           <Timeline timeline={timeline} />

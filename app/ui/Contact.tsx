@@ -1,12 +1,14 @@
 'use client';
 import React, { useRef, useState } from 'react';
-import { FaEnvelope, FaTelegramPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { topToBottom } from '@/app/ui/Animations';
-import { contactAPI, email, telegram } from '@/app/data/base';
-type Props = {};
+type Props = {
+  contactAPI: string;
+  email: string;
+  telegram: string;
+};
 
-const Contact = (props: Props) => {
+const Contact = ({ contactAPI, email, telegram }: Props) => {
   const [sending, setSending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -62,7 +64,7 @@ const Contact = (props: Props) => {
         animate='show'
         transition={{ delay: 0.3 }}
       >
-        Contact me
+        [Contact]
       </motion.h1>
 
       <motion.div
@@ -73,11 +75,11 @@ const Contact = (props: Props) => {
         transition={{ delay: 0.5 }}
       >
         <div className='flex items-center gap-2'>
-          <FaEnvelope />
+          <i className='fa fa-envelope'></i>
           {email}
         </div>
         <div className='flex items-center gap-2'>
-          <FaTelegramPlane /> {telegram}
+          <i className='fa fa-telegram'></i> {telegram}
         </div>
       </motion.div>
 

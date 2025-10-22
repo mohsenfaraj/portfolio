@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
-import { cards, iconClass } from '@/app/data/about';
 import { motion } from 'framer-motion';
 import { topToBottom } from '@/app/ui/Animations';
-type Props = {};
+import { card } from '../lib/loadAbout';
 
-const About = (props: Props) => {
+type Props = { cards: card[] };
+
+const About = ({ cards }: Props) => {
   return (
     <section id='about'>
       <div className='container mx-auto px-4'>
@@ -16,7 +17,7 @@ const About = (props: Props) => {
           animate='show'
           transition={{ delay: 0.3 }}
         >
-          About Me
+          [About]
         </motion.h2>
         <motion.p
           className='mt-3 text-center text-foreground'
@@ -45,14 +46,19 @@ const About = (props: Props) => {
                   stiffness: 100,
                 }}
               >
-                {<card.icon className={iconClass} />}
+                {
+                  <i
+                    className={
+                      'fa absolute left-8 top-1/2 z-0 -translate-y-1/2 text-9xl text-zinc-200 dark:text-[#353535] ' +
+                      card.icon
+                    }
+                  />
+                }
                 <div className='relative z-20'>
-                  <h3 className='inline-block items-center gap-2 bg-gradient-to-r from-[#e41700] to-[#e46400] bg-clip-text text-2xl font-semibold text-transparent shadow-black drop-shadow-md'>
+                  <h3 className='inline-block items-center gap-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-2xl font-bold text-transparent shadow-black'>
                     {card.title}
                   </h3>
-                  <p className='mt-2 leading-7 text-foreground shadow-black drop-shadow-md'>
-                    {card.body}
-                  </p>
+                  <p className='mt-2 leading-7 text-foreground'>{card.body}</p>
                 </div>
               </motion.div>
             );

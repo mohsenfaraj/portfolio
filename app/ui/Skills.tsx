@@ -1,12 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
 import { topToBottom } from './Animations';
-import { skills } from '../data/skills';
 import { useState } from 'react';
+import { skill } from '../lib/loadSkills';
 
-type Props = {};
+type Props = { skills: skill[] };
 
-const Skills = (props: Props) => {
+const Skills = ({ skills }: Props) => {
   const [animateCircles, setAnimateCircles] = useState(false);
   const circleRadius = 40;
   const circleCircumference = 2 * Math.PI * circleRadius;
@@ -61,8 +61,8 @@ const Skills = (props: Props) => {
                 </linearGradient>
               </defs>
             </motion.svg>
-            <div className='absolute inset-0 flex items-center justify-center'>
-              <skill.icon className='h-10 w-10 text-foreground' />
+            <div className='absolute inset-0 flex items-center justify-center text-3xl text-primary'>
+              <i className={skill.icon}></i>
             </div>
           </div>
           <div className='mt-2 text-center'>

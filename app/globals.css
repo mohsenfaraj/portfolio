@@ -1,3 +1,6 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,16 +8,16 @@
 :root {
   --background: #ffffff;
   --foreground: #353535;
-  --primary: #e46400;
-  --secondary: #e41700;
+  --primary: #197b64;
+  --secondary: #205d70;
   --bars: #ddd;
 }
 
 [data-theme='dark'] {
   --background: #121212;
   --foreground: #ccc;
-  --primary: #e46400;
-  --secondary: #e41700;
+  --primary: #197b64;
+  --secondary: #205d70;
   --bars: #232323;
 }
 

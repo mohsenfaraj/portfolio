@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 import { topToBottom } from './Animations';
 import Button from './components/button';
 import clsx from 'clsx';
-import { FaImage, FaLink } from 'react-icons/fa';
 
 type projects = {
   name: string;
@@ -58,7 +57,7 @@ const Projects = ({ categories, projects }: Props) => {
         animate='show'
         transition={{ delay: 0.3 }}
       >
-        Portfolio
+        [Projects]
       </motion.h1>
       <motion.p
         className='mt-3 text-center'
@@ -123,7 +122,7 @@ const Projects = ({ categories, projects }: Props) => {
                       className='rounded-2xl'
                     />
                   )}
-                  {!item.image && <FaImage />}
+                  {!item.image && <i className='fa fa-image' />}
                 </div>
                 <div className='flex flex-grow flex-col overflow-hidden p-5'>
                   <h2 className='inline-flex items-center gap-2 text-xl font-bold text-primary'>
@@ -138,7 +137,7 @@ const Projects = ({ categories, projects }: Props) => {
                       target='_blank'
                       className='flex items-center gap-1'
                     >
-                      <FaLink /> link
+                      <i className='fa fa-link'></i> link
                     </a>
                   </div>
                   <div className='flex min-h-7 items-center gap-2'>

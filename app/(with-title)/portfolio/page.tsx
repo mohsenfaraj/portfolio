@@ -1,4 +1,4 @@
-import { fullname } from '@/app/data/base';
+import { fullname } from '@/app/lib/loadBase';
 import { loadYaml } from '@/app/lib/loadYaml';
 import Projects from '@/app/ui/Projects';
 import { Metadata } from 'next';
