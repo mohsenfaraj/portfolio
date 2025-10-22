@@ -11,7 +11,7 @@ const Button = ({ children, type, onClick }: Props) => {
       className={clsx(
         'box-border cursor-pointer rounded border-2 bg-origin-border px-5 py-2 font-bold capitalize',
         type === 'gradient' &&
-          'border-transparent bg-gradient-to-r from-primary to-secondary text-white',
+          'border-transparent bg-linear-to-r from-primary to-secondary text-white',
         type === 'outline' &&
           'border-gray-400 text-gray-400 transition duration-200 hover:border-primary hover:text-primary dark:bg-zinc-800',
         type !== 'outline' && type !== 'gradient' && 'bg-primary text-white'

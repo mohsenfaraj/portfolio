@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { loadYaml } from '@/app/lib/loadYaml';
 import Experience from '@/app/ui/Experience';
 import { Metadata } from 'next';

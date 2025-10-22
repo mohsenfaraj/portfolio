@@ -2,7 +2,6 @@
 
 const nextConfig = {
   output: 'export',
-  swcMinify: true,
   productionBrowserSourceMaps: false,
   images: { unoptimized: true },
 };

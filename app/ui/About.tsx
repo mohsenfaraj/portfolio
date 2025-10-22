@@ -11,7 +11,7 @@ const About = ({ cards }: Props) => {
     <section id='about'>
       <div className='container mx-auto px-4'>
         <motion.h2
-          className='text-center text-4xl font-bold text-primary'
+          className='text-primary text-center text-4xl font-bold'
           variants={topToBottom}
           initial='hidden'
           animate='show'
@@ -20,7 +20,7 @@ const About = ({ cards }: Props) => {
           [About]
         </motion.h2>
         <motion.p
-          className='mt-3 text-center text-foreground'
+          className='text-foreground mt-3 text-center'
           variants={topToBottom}
           initial='hidden'
           animate='show'
@@ -49,16 +49,16 @@ const About = ({ cards }: Props) => {
                 {
                   <i
                     className={
-                      'fa absolute left-8 top-1/2 z-0 -translate-y-1/2 text-9xl text-zinc-200 dark:text-[#353535] ' +
+                      'fa fa-5x absolute top-1/2 left-8 z-0 -translate-y-1/2 text-zinc-200 dark:text-[#353535] ' +
                       card.icon
                     }
                   />
                 }
                 <div className='relative z-20'>
-                  <h3 className='inline-block items-center gap-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-2xl font-bold text-transparent shadow-black'>
+                  <h3 className='from-primary to-secondary inline-block items-center gap-2 bg-linear-to-r bg-clip-text text-2xl font-bold text-transparent shadow-black'>
                     {card.title}
                   </h3>
-                  <p className='mt-2 leading-7 text-foreground'>{card.body}</p>
+                  <p className='text-foreground mt-2 leading-7'>{card.body}</p>
                 </div>
               </motion.div>
             );

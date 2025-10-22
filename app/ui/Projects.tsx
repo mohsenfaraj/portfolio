@@ -51,7 +51,7 @@ const Projects = ({ categories, projects }: Props) => {
   return (
     <div>
       <motion.h1
-        className='text-center text-4xl font-bold text-primary'
+        className='text-primary text-center text-4xl font-bold'
         variants={topToBottom}
         initial='hidden'
         animate='show'
@@ -106,6 +106,7 @@ const Projects = ({ categories, projects }: Props) => {
               <motion.div
                 key={item.name}
                 className='flex flex-col rounded-2xl shadow-lg dark:bg-zinc-900'
+                // @ts-expect-error
                 variants={cardVariants}
                 initial={'hidden'}
                 animate='visible'
@@ -124,14 +125,14 @@ const Projects = ({ categories, projects }: Props) => {
                   )}
                   {!item.image && <i className='fa fa-image' />}
                 </div>
-                <div className='flex flex-grow flex-col overflow-hidden p-5'>
-                  <h2 className='inline-flex items-center gap-2 text-xl font-bold text-primary'>
+                <div className='flex grow flex-col overflow-hidden p-5'>
+                  <h2 className='text-primary inline-flex items-center gap-2 text-xl font-bold'>
                     {item.name}
                   </h2>
                   <p className='my-5 overflow-hidden text-justify text-sm leading-relaxed'>
                     {item.short}
                   </p>
-                  <div className='mb-3 mt-auto border-b py-1 text-primary dark:border-zinc-700'>
+                  <div className='text-primary mt-auto mb-3 border-b py-1 dark:border-zinc-700'>
                     <a
                       href={item.link}
                       target='_blank'

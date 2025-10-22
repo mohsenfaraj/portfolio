@@ -1,12 +1,19 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --backgroundImage: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
+  --background: ;
   --foreground: #353535;
   --primary: #197b64;
   --secondary: #205d70;

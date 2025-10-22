@@ -66,7 +66,7 @@ const Skills = ({ skills }: Props) => {
             </div>
           </div>
           <div className='mt-2 text-center'>
-            <h4 className='bg-gradient-to-r from-primary to-secondary bg-clip-text text-lg font-semibold text-transparent'>
+            <h4 className='bg-linear-to-r from-primary to-secondary bg-clip-text text-lg font-semibold text-transparent'>
               {skill.percentage}%
             </h4>
             <p className='text-sm text-gray-400'>{skill.name}</p>
