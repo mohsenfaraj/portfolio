@@ -5,6 +5,6 @@ export type navlink = {
   link: string;
 };
 
-const nav: navlink[] = loadYaml('nav.yml');
+const { nav }: { nav: navlink[] } = loadYaml('nav.yml');
 
 export default nav;

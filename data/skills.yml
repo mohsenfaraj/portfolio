@@ -1,47 +1,48 @@
-- name: HTML
-  percentage: 100
-  icon: devicon-html5-plain
+skills:
+  - name: HTML
+    percentage: 100
+    icon: devicon-html5-plain
 
-- name: CSS
-  percentage: 95
-  icon: devicon-css3-plain
+  - name: CSS
+    percentage: 95
+    icon: devicon-css3-plain
 
-- name: JavaScript
-  percentage: 90
-  icon: devicon-javascript-plain
+  - name: JavaScript
+    percentage: 90
+    icon: devicon-javascript-plain
 
-- name: React
-  percentage: 80
-  icon: devicon-react-plain
+  - name: React
+    percentage: 80
+    icon: devicon-react-plain
 
-- name: Tailwind
-  percentage: 80
-  icon: devicon-tailwindcss-original
+  - name: Tailwind
+    percentage: 80
+    icon: devicon-tailwindcss-original
 
-- name: Next.js
-  percentage: 70
-  icon: devicon-nextjs-plain
+  - name: Next.js
+    percentage: 70
+    icon: devicon-nextjs-plain
 
-- name: Express
-  percentage: 65
-  icon: devicon-express-original
+  - name: Express
+    percentage: 65
+    icon: devicon-express-original
 
-- name: MySql
-  percentage: 65
-  icon: devicon-mysql-original
+  - name: MySql
+    percentage: 65
+    icon: devicon-mysql-original
 
-- name: Docker
-  percentage: 60
-  icon: devicon-docker-plain
+  - name: Docker
+    percentage: 60
+    icon: devicon-docker-plain
 
-- name: Java
-  percentage: 60
-  icon: devicon-java-plain
+  - name: Java
+    percentage: 60
+    icon: devicon-java-plain
 
-- name: Linux
-  percentage: 50
-  icon: devicon-linux-plain
+  - name: Linux
+    percentage: 50
+    icon: devicon-linux-plain
 
-- name: PHP
-  percentage: 30
-  icon: devicon-php-plain
+  - name: PHP
+    percentage: 30
+    icon: devicon-php-plain

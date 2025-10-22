@@ -6,5 +6,5 @@ export type card = {
   icon: string;
 };
 
-const cards: card[] = loadYaml('about.yml');
+const { cards }: { cards: card[] } = loadYaml('about.yml');
 export default cards;

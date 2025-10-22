@@ -1,56 +1,58 @@
-- date: 24 August 2001
-  title: the day it all started
-  body:
-    i was born in 24 August 2001 in a village called Benis in East Azerbaijan,
-    Iran... against the all odds. What a start!
-- date: Some where in 2007
-  title: the first deadly sin
-  body:
-    I've touched a keyboard and instantly broke the PS/2 pin trying to connect
-    to computer. i got slapped in the old asian family fashion way! but did it
-    stop me?
-- date: Some where around 2013
-  title: guess what?
-  body:
-    i was still eager to learn more about computer. I've attended ICDL class,
-    read my sister's computer books (multiple times) but i was always skipping
-    the programming part. until one day i challenged my self to learn it (it was
-    VB though)
-- date: 11 january 2016
-  title: falling in the web
-  body: this was the date i created my first weblog. I was studying at 'Nemooneh
-    kharazmi shabestar' middle school and i created this blog for my school.
-    this was my entry point for learning web development. at this time I've got
-    familiarized with Wordpress CMS and a bit of PHP.
-- null
-- date: 2016 - 2018
-  title: calling to the aid
-  body: I was accepted into 'Allame Majlesi' gifted high school in math and
-    physics major. I had different tasks in school like creating banners,
-    updating website and more. with the help of our school assistant I've
-    automated the process of grading test quiz sheets. it was around this time
-    that i decided to learn programming more in depth. I've learnt about github
-    around this time and created an account. at this time i learnt HTML, CSS, JS
-    and a bit of Java and C for programming questions.
-    i tried to learn android development but because of my old laptop i
-    had difficulties and decided to stick to web development.
-- null
-- date: '2020'
-  title: all hail university!
-  body: I was accepted to computer engineering major in Urmia university of
-    technology. from the start i was eager to teach what i knew to my friends
-    and colleges. Also I was creating tools for bloggers and creating post
-    about web development around this time at my blog.
-- date: '2021 - 2024'
-  title: joining @CE-UUT
-  body:
-    at this year I was elected as a central member of scientific association of computer at the urmia university of technology.
-    i was editing banners, schedule seminars, compose educational posts and videos and act as a bridge between students and management.
-    i had a seminar about using git and github at this time too.
-    with the help of my friends we have hosted UUT-CTF and linux Lugs (Urum lug) which i am proud to be a part of it.
-    at the final years of my university my goal was to help students with my projects
-    and guide them in the field of education and computer.
+events:
+  - date: 24 August 2001
+    title: the day it all started
+    body:
+      i was born in 24 August 2001 in a village called Benis in East Azerbaijan,
+      Iran... against the all odds. What a start!
+  - date: Some where in 2007
+    title: the first deadly sin
+    body:
+      I've touched a keyboard and instantly broke the PS/2 pin trying to connect
+      to computer. i got slapped in the old asian family fashion way! but did it
+      stop me?
+  - date: Some where around 2013
+    title: guess what?
+    body:
+      i was still eager to learn more about computer. I've attended ICDL class,
+      read my sister's computer books (multiple times) but i was always skipping
+      the programming part. until one day i challenged my self to learn it (it was
+      VB though)
+  - date: 11 january 2016
+    title: falling in the web
+    body:
+      this was the date i created my first weblog. I was studying at 'Nemooneh
+      kharazmi shabestar' middle school and i created this blog for my school.
+      this was my entry point for learning web development. at this time I've got
+      familiarized with Wordpress CMS and a bit of PHP.
+  - null
+  - date: 2016 - 2018
+    title: calling to the aid
+    body: I was accepted into 'Allame Majlesi' gifted high school in math and
+      physics major. I had different tasks in school like creating banners,
+      updating website and more. with the help of our school assistant I've
+      automated the process of grading test quiz sheets. it was around this time
+      that i decided to learn programming more in depth. I've learnt about github
+      around this time and created an account. at this time i learnt HTML, CSS, JS
+      and a bit of Java and C for programming questions.
+      i tried to learn android development but because of my old laptop i
+      had difficulties and decided to stick to web development.
+  - null
+  - date: '2020'
+    title: all hail university!
+    body: I was accepted to computer engineering major in Urmia university of
+      technology. from the start i was eager to teach what i knew to my friends
+      and colleges. Also I was creating tools for bloggers and creating post
+      about web development around this time at my blog.
+  - date: '2021 - 2024'
+    title: joining @CE-UUT
+    body:
+      at this year I was elected as a central member of scientific association of computer at the urmia university of technology.
+      i was editing banners, schedule seminars, compose educational posts and videos and act as a bridge between students and management.
+      i had a seminar about using git and github at this time too.
+      with the help of my friends we have hosted UUT-CTF and linux Lugs (Urum lug) which i am proud to be a part of it.
+      at the final years of my university my goal was to help students with my projects
+      and guide them in the field of education and computer.
 
-- date: '2024'
-  title: graduation
-  body: I was graduated from university at this time.
+  - date: '2024'
+    title: graduation
+    body: I was graduated from university at this time.

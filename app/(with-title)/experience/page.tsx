@@ -7,8 +7,8 @@ import skills from '@/app/lib/loadSkills';
 type Props = {};
 
 const ExperiencePage = (props: Props) => {
-  const timeline = loadYaml('timeline.yml');
-  return <Experience timeline={timeline} skills={skills} />;
+  const { events } = loadYaml('timeline.yml');
+  return <Experience timeline={events} skills={skills} />;
 };
 export const metadata: Metadata = {
   title: 'Experience',

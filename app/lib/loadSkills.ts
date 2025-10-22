@@ -6,5 +6,5 @@ export type skill = {
   icon: string;
 };
 
-const skills: skill[] = loadYaml('skills.yml');
+const { skills }: { skills: skill[] } = loadYaml('skills.yml');
 export default skills;

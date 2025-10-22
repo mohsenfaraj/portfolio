@@ -1,14 +1,15 @@
-- name: Home
-  link: '/'
+nav:
+  - name: Home
+    link: '/'
 
-- name: About
-  link: '/about'
+  - name: About
+    link: '/about'
 
-- name: Experience
-  link: '/experience'
+  - name: Experience
+    link: '/experience'
 
-- name: 'Portfolio'
-  link: '/portfolio'
+  - name: 'Portfolio'
+    link: '/portfolio'
 
-- name: Contact
-  link: '/contact'
+  - name: Contact
+    link: '/contact'

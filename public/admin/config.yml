@@ -1,29 +1,18 @@
 backend:
   name: github
   repo: mohsenfaraj/portfolio
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
   site_domain: https://mohsenfaraj.ir
   base_url: https://mohsenfaraj.ir
   auth_endpoint: /api/auth
 media_folder: public/images
 public_folder: /images
 collections:
-  - name: 'about'
-    label: 'About'
-    files:
-      - file: 'data/about.yml'
-        fields:
-          - widget: list
-            fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: 'Body', name: 'body', widget: 'text' }
-              - { label: 'Icon', name: 'icon', widget: 'string' }
-
-  # Base configuration
-  - name: 'base'
+  - name: 'settings'
     label: 'Base Configuration'
     files:
       - file: 'data/base.yml'
+        name: 'base'
         label: 'Site Settings'
         fields:
           - { label: 'Full Name', name: 'fullname', widget: 'string' }
@@ -36,28 +25,83 @@ collections:
           - { label: 'Email', name: 'email', widget: 'string' }
           - { label: 'Telegram', name: 'telegram', widget: 'string' }
           - { label: 'CV Link', name: 'CVLink', widget: 'string' }
-
-  # Navigation
-  - name: 'nav'
-    label: 'Navigation'
-    files:
       - file: 'data/nav.yml'
+        name: links
+        label: 'Navbar Links'
         fields:
           - label: Links
             widget: 'list'
+            name: 'nav'
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Link', name: 'link', widget: 'string' }
-
-  # Projects
-  - name: 'projects'
+      - file: 'data/socials.yml'
+        name: socials
+        label: social
+        fields:
+          - name: socials
+            widget: 'list'
+            label: Social link
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - { label: 'Icon', name: 'icon', widget: 'string' }
+      - file: 'data/about.yml'
+        name: 'cards'
+        label: 'About'
+        fields:
+          - widget: list
+            name: 'cards'
+            label: 'About Card'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Body', name: 'body', widget: 'text' }
+              - { label: 'Icon', name: 'icon', widget: 'string' }
+      - file: 'data/skills.yml'
+        name: skills
+        label: Skills
+        fields:
+          - name: skills
+            widget: 'list'
+            label: Skill
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - {
+                  label: 'Percentage',
+                  name: 'percentage',
+                  widget: 'number',
+                  min: 0,
+                  max: 100,
+                }
+              - { label: 'Icon', name: 'icon', widget: 'string' }
+      - file: 'data/timeline.yml'
+        name: timeline
+        label: Events
+        fields:
+          - name: events
+            widget: 'list'
+            label: Event
+            fields:
+              - { label: 'Date', name: 'date', widget: 'text' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Body', name: 'body', widget: 'text' }
+  - name: 'projcats'
     label: 'Projects'
     files:
+      - file: 'data/categories.yml'
+        name: categories
+        label: Categories
+        fields:
+          - label: 'Categories'
+            widget: 'list'
+            name: categories
       - file: 'data/projects.yml'
+        name: 'projects'
         label: 'Projects'
         fields:
           - label: 'Projects'
             widget: 'list'
+            name: projects
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Short Description', name: 'short', widget: 'text' }
@@ -71,43 +115,8 @@ collections:
               - label: 'Tags'
                 name: 'tags'
                 widget: 'relation'
-                collection: 'categories'
-                value_field: 'categories.*'
-                search_fields: ['categories.*']
+                collection: 'projcats'
+                value_field: 'categories.categories'
+                search_fields: ['categories.categories']
                 multiple: true
-
-  - name: 'categories'
-    label: 'Categories'
-    widget: 'list'
-
-  # Skills
-  - name: 'skills'
-    label: 'Skills'
-    files:
-      - file: 'data/skills.yml'
-        fields:
-          - name: skill
-            widget: 'list'
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - {
-                  label: 'Percentage',
-                  name: 'percentage',
-                  widget: 'number',
-                  min: 0,
-                  max: 100,
-                }
-              - { label: 'Icon', name: 'icon', widget: 'string' }
-
-  # Social Links
-  - name: 'socials'
-    label: 'Social Links'
-    files:
-      - file: 'data/socials.yml'
-        fields:
-          - name: social link
-            widget: 'list'
-            fields:
-              - { label: 'Name', name: 'name', widget: 'string' }
-              - { label: 'Link', name: 'link', widget: 'string' }
-              - { label: 'Icon', name: 'icon', widget: 'string' }
+                required: false

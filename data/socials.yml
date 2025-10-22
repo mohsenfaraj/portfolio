@@ -1,23 +1,24 @@
-- name: github
-  link: https://github.com/mohsenfaraj
-  icon: fa-github
+socials:
+  - name: github
+    link: https://github.com/mohsenfaraj
+    icon: fa-github
 
-- name: linkedin
-  link: https://www.linkedin.com/in/mohsenfaraj
-  icon: fa-linkedin
+  - name: linkedin
+    link: https://www.linkedin.com/in/mohsenfaraj
+    icon: fa-linkedin
 
-- name: instagram
-  link: https://instagram.com/mohsenfarajig
-  icon: fa-instagram
+  - name: instagram
+    link: https://instagram.com/mohsenfarajig
+    icon: fa-instagram
 
-- name: telegram
-  link: https://telegram.me/mohsenfaraj
-  icon: fa-telegram
+  - name: telegram
+    link: https://telegram.me/mohsenfaraj
+    icon: fa-telegram
 
-- name: weblog
-  link: https://chortak.blog.ir
-  icon: fa-quote-right
+  - name: weblog
+    link: https://chortak.blog.ir
+    icon: fa-quote-right
 
-- name: Gmail
-  link: mailto:contact@mohsenfaraj.ir
-  icon: fa-envelope
+  - name: Gmail
+    link: mailto:contact@mohsenfaraj.ir
+    icon: fa-envelope

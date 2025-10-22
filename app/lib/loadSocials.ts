@@ -6,5 +6,5 @@ export type link = {
   icon: string;
 };
 
-const socials: link[] = loadYaml('socials.yml');
+const { socials }: { socials: link[] } = loadYaml('socials.yml');
 export default socials;
