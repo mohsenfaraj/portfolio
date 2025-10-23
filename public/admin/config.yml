@@ -5,11 +5,20 @@ backend:
   site_domain: https://mohsenfaraj.ir
   base_url: https://mohsenfaraj.ir
   auth_endpoint: /api/auth
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
 media_folder: public/images
 public_folder: /images
 collections:
   - name: 'settings'
     label: 'Base Configuration'
+    editor:
+      preview: false
     files:
       - file: 'data/base.yml'
         name: 'base'
@@ -24,7 +33,7 @@ collections:
           - { label: 'Contact API URL', name: 'contactAPI', widget: 'string' }
           - { label: 'Email', name: 'email', widget: 'string' }
           - { label: 'Telegram', name: 'telegram', widget: 'string' }
-          - { label: 'CV Link', name: 'CVLink', widget: 'string' }
+          - { label: 'CV Link', name: 'CVLink', widget: 'file' }
       - file: 'data/nav.yml'
         name: links
         label: 'Navbar Links'
@@ -82,11 +91,13 @@ collections:
             widget: 'list'
             label: Event
             fields:
-              - { label: 'Date', name: 'date', widget: 'text' }
               - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Date', name: 'date', widget: 'string' }
               - { label: 'Body', name: 'body', widget: 'text' }
   - name: 'projcats'
     label: 'Projects'
+    editor:
+      preview: false
     files:
       - file: 'data/categories.yml'
         name: categories
@@ -102,6 +113,7 @@ collections:
           - label: 'Projects'
             widget: 'list'
             name: projects
+            add_to_top: true
             fields:
               - { label: 'Name', name: 'name', widget: 'string' }
               - { label: 'Short Description', name: 'short', widget: 'text' }
@@ -114,9 +126,6 @@ collections:
               - { label: 'Link', name: 'link', widget: 'string' }
               - label: 'Tags'
                 name: 'tags'
-                widget: 'relation'
+                widget: 'list'
                 collection: 'projcats'
-                value_field: 'categories.categories'
-                search_fields: ['categories.categories']
-                multiple: true
                 required: false

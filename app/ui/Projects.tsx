@@ -20,7 +20,7 @@ type Props = {
 };
 
 const Projects = ({ categories, projects }: Props) => {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState<null | string>(null);
 
   // Animation variants for cards
   const cardVariants = {
@@ -46,7 +46,10 @@ const Projects = ({ categories, projects }: Props) => {
   };
 
   function handleFilterChange(newFilter: string) {
-    setFilter(newFilter);
+    // if the user clicked the active filter, remove the filter
+    if (filter == newFilter) {
+      setFilter(null);
+    } else setFilter(newFilter);
   }
   return (
     <div>
@@ -101,7 +104,7 @@ const Projects = ({ categories, projects }: Props) => {
       >
         <AnimatePresence>
           {projects.map((item) => {
-            if (!item.tags?.includes(filter) && filter !== 'all') return null;
+            if (filter && !item.tags?.includes(filter)) return null;
             return (
               <motion.div
                 key={item.name}

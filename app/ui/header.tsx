@@ -68,7 +68,7 @@ export default function Header({ nav }: Props) {
                 href={item.link}
                 data-link={item.link}
                 className={clsx(
-                  'relative transition duration-200 hover:text-primary',
+                  'hover:text-primary relative transition duration-200',
                   isActive && 'text-primary'
                 )}
               >
@@ -79,7 +79,7 @@ export default function Header({ nav }: Props) {
 
           {/* Render underline */}
           <motion.div
-            className='absolute bottom-0 h-[2px] bg-primary'
+            className='bg-primary absolute bottom-0 h-[2px]'
             animate={{
               left: underlinePos.left,
               width: underlinePos.width,
@@ -98,23 +98,23 @@ export default function Header({ nav }: Props) {
       </motion.header>
 
       {/* For Mobile Devices */}
-      <div className='fixed right-0 top-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
+      <div className='fixed top-0 right-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
         <div
-          className='rounded-full bg-zinc-100 p-3 dark:bg-zinc-800'
+          className='dark:text-foreground flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-zinc-100 p-3 text-lg text-zinc-600 dark:bg-zinc-800'
           onClick={() => handleDrawer(true)}
         >
           <i className='fa fa-bars'></i>
         </div>
       </div>
-      <div className='fixed left-0 top-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
+      <div className='fixed top-0 left-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
         <ToggleDarkMode theme={theme} setTheme={setTheme} />
       </div>
-      <motion.header className='flex justify-end text-foreground md:hidden'>
+      <motion.header className='text-foreground flex justify-end md:hidden'>
         <AnimatePresence>
           {drawerState && (
             <motion.nav
               className={clsx(
-                'fixed right-0 top-0 h-full w-full gap-10 bg-[#ffffff88] backdrop-blur dark:bg-[#00000088]',
+                'fixed top-0 right-0 h-full w-full gap-10 bg-[#ffffff88] backdrop-blur dark:bg-[#00000088]',
                 'z-50 flex flex-col items-center justify-center'
               )}
               initial={{ opacity: 0, filter: 'blur(10px)' }}
@@ -156,7 +156,7 @@ export default function Header({ nav }: Props) {
                       href={item.link}
                       data-link={item.link}
                       className={clsx(
-                        'relative transition duration-200 hover:text-primary',
+                        'hover:text-primary relative transition duration-200',
                         isActive && 'text-primary underline'
                       )}
                     >
