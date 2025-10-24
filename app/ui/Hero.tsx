@@ -37,7 +37,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
         whileInView='show'
         exit={{ opacity: 0 }}
       >
-        <span className='absolute left-[-30%] top-[-35%] z-0 min-h-96 min-w-96 bg-gradient-radial from-primary from-10% to-transparent to-75% p-10 opacity-10 blur filter'>
+        <span className='bg-gradient-radial from-primary absolute top-[-35%] left-[-30%] z-0 min-h-96 min-w-96 from-10% to-transparent to-75% p-10 opacity-10 blur filter'>
           {/* The Blur Effect */}
         </span>
         <div className='z-10 w-96 px-4 md:px-0'>
@@ -55,7 +55,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
           </motion.p>
           <motion.h2
             variants={topToBottom}
-            className='mt-6 text-center text-4xl font-bold text-primary md:text-5xl'
+            className='text-primary font-title mt-6 text-center text-4xl font-bold md:text-5xl'
             id='typewriter'
           ></motion.h2>
           <motion.div
@@ -66,7 +66,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
               return (
                 <a
                   href={social.link}
-                  className='transition duration-200 hover:text-primary'
+                  className='hover:text-primary transition duration-200'
                   title={social.name}
                   target='_blank'
                   key={social.name}
@@ -100,7 +100,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
           alt='profile picture'
           height={400}
           width={400}
-          className='rounded-full border-primary grayscale filter'
+          className='border-primary rounded-full grayscale filter'
         ></Image>
       </motion.div>
     </motion.div>

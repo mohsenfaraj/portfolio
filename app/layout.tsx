@@ -1,10 +1,18 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import './css/globals.css';
+import './css/font-awesome.min.css';
 import Header from './ui/header';
 import { Inter } from 'next/font/google';
+import { Saira_Stencil_One } from 'next/font/google';
 import { fullname, description } from './lib/loadBase';
 import nav from './lib/loadNav';
-const interFont = Inter({ subsets: ['latin'], display: 'swap' });
+const fontBody = Inter({ subsets: ['latin'], display: 'swap' });
+const fontTitle = Saira_Stencil_One({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400',
+  variable: '--font-var-title',
+});
 export const metadata: Metadata = {
   title: {
     default: fullname,
@@ -20,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' className='dark' data-theme='dark'>
-      <body className={`${interFont.className} transition duration-500`}>
+      <body
+        className={`${fontBody.className} ${fontTitle.variable} transition duration-500`}
+      >
         <div className='container mx-auto max-w-5xl px-2 pb-10'>
           <Header nav={nav} />
           <div className='mt-5'>{children}</div>

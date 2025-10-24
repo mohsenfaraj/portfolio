@@ -1,7 +1,7 @@
 export const dynamic = 'force-static';
 
 import type { MetadataRoute } from 'next';
-import BASEURL from './lib/loadBase';
+import { BASEURL } from './lib/loadBase';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

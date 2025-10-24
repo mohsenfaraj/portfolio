@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { topToBottom } from './Animations';
 import { useState } from 'react';
 import { skill } from '../lib/loadSkills';
-
+import '@/app/css/devicon.min.css';
 type Props = { skills: skill[] };
 
 const Skills = ({ skills }: Props) => {
@@ -61,12 +61,12 @@ const Skills = ({ skills }: Props) => {
                 </linearGradient>
               </defs>
             </motion.svg>
-            <div className='absolute inset-0 flex items-center justify-center text-3xl text-primary'>
+            <div className='text-primary absolute inset-0 flex items-center justify-center text-3xl'>
               <i className={skill.icon}></i>
             </div>
           </div>
           <div className='mt-2 text-center'>
-            <h4 className='bg-linear-to-r from-primary to-secondary bg-clip-text text-lg font-semibold text-transparent'>
+            <h4 className='from-primary to-secondary bg-linear-to-r bg-clip-text text-lg font-semibold text-transparent'>
               {skill.percentage}%
             </h4>
             <p className='text-sm text-gray-400'>{skill.name}</p>
