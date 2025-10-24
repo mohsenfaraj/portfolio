@@ -129,3 +129,13 @@ collections:
                 widget: 'list'
                 collection: 'projcats'
                 required: false
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'data/posts'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Summary', name: 'summary', widget: 'text' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

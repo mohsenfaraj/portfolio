@@ -6,10 +6,9 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --backgroundImage: radial-gradient(circle, var(--tw-gradient-stops));
-}
-@theme inline {
   --font-title: var(--font-var-title);
 }
+@plugin '@tailwindcss/typography';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
