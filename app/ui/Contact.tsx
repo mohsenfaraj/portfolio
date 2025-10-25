@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { topToBottom } from '@/app/ui/Animations';
 type Props = {
@@ -58,7 +58,7 @@ const Contact = ({ contactAPI, email, telegram }: Props) => {
   return (
     <div>
       <motion.h1
-        className='text-center text-4xl font-bold text-primary'
+        className='text-primary text-center text-4xl font-bold'
         variants={topToBottom}
         initial='hidden'
         animate='show'
@@ -108,14 +108,14 @@ const Contact = ({ contactAPI, email, telegram }: Props) => {
           autoComplete='off'
           placeholder='Your name'
           required
-          className='rounded border border-zinc-500 bg-zinc-50 p-4 outline-none duration-200 focus:border-primary dark:bg-zinc-900 dark:text-white'
+          className='focus:border-primary rounded border border-zinc-500 bg-zinc-50 p-4 duration-200 outline-none dark:bg-zinc-900 dark:text-white'
         />
         <input
           type='email'
           name='email'
           placeholder='Email'
           required
-          className='rounded border border-zinc-500 bg-zinc-50 p-4 outline-none duration-200 focus:border-primary dark:bg-zinc-900 dark:text-white'
+          className='focus:border-primary rounded border border-zinc-500 bg-zinc-50 p-4 duration-200 outline-none dark:bg-zinc-900 dark:text-white'
         />
         <textarea
           name='message'
@@ -123,12 +123,12 @@ const Contact = ({ contactAPI, email, telegram }: Props) => {
           cols={30}
           rows={8}
           placeholder='Message...'
-          className='rounded border border-zinc-500 bg-zinc-50 p-4 outline-none focus:border-primary dark:bg-zinc-900 dark:text-white'
+          className='focus:border-primary rounded border border-zinc-500 bg-zinc-50 p-4 outline-none dark:bg-zinc-900 dark:text-white'
         ></textarea>
         <input
           type='submit'
           value={sending ? 'Sending...' : 'Submit'}
-          className='cursor-pointer rounded border border-zinc-500 bg-zinc-50 p-4 font-bold outline-none hover:border-primary hover:text-primary focus:border-primary focus:text-primary disabled:opacity-50 dark:bg-zinc-900 dark:text-white'
+          className='hover:border-primary hover:text-primary focus:border-primary focus:text-primary cursor-pointer rounded border border-zinc-500 bg-zinc-50 p-4 font-bold outline-none disabled:opacity-50 dark:bg-zinc-900 dark:text-white'
           disabled={sending}
         />
       </motion.form>

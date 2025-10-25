@@ -56,8 +56,8 @@ const Skills = ({ skills }: Props) => {
               />
               <defs>
                 <linearGradient id='gradient' gradientTransform='rotate(90)'>
-                  <stop offset='0%' stopColor='var(--primary)' />
-                  <stop offset='100%' stopColor='var(--secondary)' />
+                  <stop offset='0%' stopColor='rgb(var(--primary))' />
+                  <stop offset='100%' stopColor='rgb(var(--secondary))' />
                 </linearGradient>
               </defs>
             </motion.svg>

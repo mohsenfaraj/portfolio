@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import { motion } from 'framer-motion';
 import { topToBottom } from '@/app/ui/Animations';
 import { card } from '../lib/loadAbout';

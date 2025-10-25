@@ -1,8 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import rehypeStringify from 'rehype-stringify';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
+import rehypeHighlight from 'rehype-highlight';
+import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 const postsDirectory = path.join(process.cwd(), 'data', 'posts');
 
@@ -48,10 +54,17 @@ export async function readPost(id: string) {
   const fullpath = path.join(postsDirectory, id + '.md');
   const fileContent = fs.readFileSync(fullpath, 'utf-8');
   const matterResult = matter(fileContent);
-  const processedContent = await remark()
-    .use(html)
+
+  const file = await unified()
+    .use(remarkParse)
+    .use(remarkGfm)
+    .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings)
+    .use(rehypeHighlight, { detect: true })
+    .use(rehypeStringify)
     .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const contentHtml = file.toString();
   return {
     id,
     contentHtml,

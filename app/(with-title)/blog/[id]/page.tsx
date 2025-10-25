@@ -8,15 +8,15 @@ export default async function BlogPost({
   const { id } = await params;
   const post = await readPost(id);
   return (
-    <article>
-      <h1 className='text-4xl'>{post.title}</h1>
+    <article className='mt-20 md:mt-0'>
+      <h1 className='text-primary text-4xl'>{post.title}</h1>
       <p className='mt-2'>
         <i className='fa fa-calendar' /> &nbsp;
         {post.date}
       </p>
       <div
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        className='prose mt-5'
+        className='prose dark:prose-invert prose-pre:bg-[#0d1117] prose-a:text-primary mt-5'
       ></div>
       <div className='mt-5 flex items-baseline gap-4'>
         <span>
@@ -26,7 +26,7 @@ export default async function BlogPost({
           {post.tags.map((tag) => {
             return (
               <li
-                className='rounded-lg bg-neutral-400 p-1 text-sm text-white'
+                className='rounded border border-zinc-500 bg-zinc-100 p-1 text-sm text-zinc-500 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-400'
                 key={tag}
               >
                 {tag}

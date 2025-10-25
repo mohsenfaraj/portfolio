@@ -3,8 +3,8 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
+  --color-primary: rgb(var(--primary));
+  --color-secondary: rgb(var(--secondary));
   --backgroundImage: radial-gradient(circle, var(--tw-gradient-stops));
   --font-title: var(--font-var-title);
 }
@@ -18,18 +18,16 @@ h3 {
   font-family: var(--font-var-title);
 }
 :root {
-  --background: ;
+  --background: #ffffff;
   --foreground: #353535;
-  --primary: #197b64;
-  --secondary: #205d70;
+  --primary: 25, 123, 100;
+  --secondary: 32, 93, 112;
   --bars: #ddd;
 }
 
 [data-theme='dark'] {
   --background: #121212;
   --foreground: #ccc;
-  --primary: #197b64;
-  --secondary: #205d70;
   --bars: #232323;
 }
 
@@ -69,6 +67,6 @@ body {
   background: #555;
 }
 ::selection {
-  background: var(--primary);
+  background: rgb(var(--primary));
   color: #fff;
 }

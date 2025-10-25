@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 type Props = {
@@ -32,7 +32,7 @@ const ToggleDarkMode = ({ theme, setTheme }: Props) => {
 
   return (
     <div
-      className='flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-zinc-100 p-3 text-lg text-zinc-600 dark:bg-zinc-800 dark:text-foreground'
+      className='dark:text-foreground flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-zinc-100 p-3 text-lg text-zinc-600 dark:bg-zinc-800'
       onClick={toggleTheme}
     >
       {theme === 'dark' ? (

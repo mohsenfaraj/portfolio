@@ -59,7 +59,7 @@ export default function Header({ nav }: Props) {
         animate='show'
         className='mx-auto hidden min-h-24 max-w-5xl items-center justify-between overflow-hidden md:flex'
       >
-        <nav className='relative flex gap-10 text-gray-500'>
+        <nav className='relative flex gap-10 text-gray-500 dark:text-gray-300'>
           {nav.map((item) => {
             const isActive = item.link === activeLink;
             return (
@@ -79,7 +79,7 @@ export default function Header({ nav }: Props) {
 
           {/* Render underline */}
           <motion.div
-            className='bg-primary absolute bottom-0 h-[2px]'
+            className='bg-primary absolute bottom-0 h-0.5'
             animate={{
               left: underlinePos.left,
               width: underlinePos.width,
@@ -98,7 +98,7 @@ export default function Header({ nav }: Props) {
       </motion.header>
 
       {/* For Mobile Devices */}
-      <div className='fixed top-0 right-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
+      <div className='fixed top-0 left-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
         <div
           className='dark:text-foreground flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-zinc-100 p-3 text-lg text-zinc-600 dark:bg-zinc-800'
           onClick={() => handleDrawer(true)}
@@ -106,17 +106,16 @@ export default function Header({ nav }: Props) {
           <i className='fa fa-bars'></i>
         </div>
       </div>
-      <div className='fixed top-0 left-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
+      <div className='fixed top-0 right-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
         <ToggleDarkMode theme={theme} setTheme={setTheme} />
       </div>
       <motion.header className='text-foreground flex justify-end md:hidden'>
         <AnimatePresence>
           {drawerState && (
             <motion.nav
-              className={clsx(
-                'fixed top-0 right-0 h-full w-full gap-10 bg-[#ffffff88] backdrop-blur dark:bg-[#00000088]',
-                'z-50 flex flex-col items-center justify-center'
-              )}
+              className={
+                'fixed top-0 right-0 z-50 grid h-full w-full grid-cols-2 gap-5 p-5 text-xl backdrop-blur'
+              }
               initial={{ opacity: 0, filter: 'blur(10px)' }}
               animate={{
                 opacity: 1,
@@ -130,7 +129,7 @@ export default function Header({ nav }: Props) {
               }}
             >
               <motion.span
-                className='flex cursor-pointer items-center'
+                className='col-span-2 flex cursor-pointer items-center justify-center rounded border bg-[#ffffffb0] select-none dark:bg-[#191919b0]'
                 onClick={() => handleDrawer(false)}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.5 } }}
@@ -142,27 +141,36 @@ export default function Header({ nav }: Props) {
               {nav.map((item, index) => {
                 const isActive = item.link === activeLink;
                 return (
-                  <motion.div
+                  <Link
                     key={item.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                      transition: { delay: index * 0.1, duration: 0.4 },
-                    }}
-                    exit={{ opacity: 0, y: 20, transition: { duration: 0.3 } }}
+                    href={item.link}
+                    data-link={item.link}
+                    className={clsx(
+                      'hover:text-primary relative transition duration-200',
+                      isActive && 'text-white'
+                    )}
                   >
-                    <Link
-                      href={item.link}
-                      data-link={item.link}
+                    <motion.div
                       className={clsx(
-                        'hover:text-primary relative transition duration-200',
-                        isActive && 'text-primary underline'
+                        'flex h-full w-full items-center justify-center rounded border bg-[#ffffffb0] dark:bg-[#191919b0]',
+                        isActive &&
+                          'bg-[rgba(var(--primary),0.8)] dark:bg-[rgba(var(--primary),0.5)]'
                       )}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                        transition: { delay: index * 0.1, duration: 0.4 },
+                      }}
+                      exit={{
+                        opacity: 0,
+                        y: 20,
+                        transition: { duration: 0.3 },
+                      }}
                     >
                       {item.name}
-                    </Link>
-                  </motion.div>
+                    </motion.div>
+                  </Link>
                 );
               })}
             </motion.nav>

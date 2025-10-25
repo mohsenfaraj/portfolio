@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { popIn } from './Animations';
 type timeLine = {
@@ -19,14 +18,14 @@ const Timeline = ({ timeline }: Props) => {
           return (
             <motion.li
               key={index}
-              className='mb-10 ms-4'
+              className='ms-4 mb-10'
               variants={popIn}
               initial='hidden'
               whileInView='show'
               viewport={{ once: true }}
             >
               <div className='absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700'></div>
-              <time className='mb-1 text-base font-normal leading-none text-gray-400 dark:text-gray-500'>
+              <time className='mb-1 text-base leading-none font-normal text-gray-400 dark:text-gray-500'>
                 {time.date}
               </time>
               <h3 className='text-2xl font-semibold text-gray-900 dark:text-white'>

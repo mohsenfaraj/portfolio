@@ -1,7 +1,7 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { topToBottom } from './Animations';
 import Button from './components/button';
 import clsx from 'clsx';
