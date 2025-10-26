@@ -6,6 +6,7 @@ type base = {
   titles: string[];
   BASEURL: string;
   contactAPI: string;
+  repo: string;
   email: string;
   telegram: string;
   CVLink: string;
@@ -19,6 +20,7 @@ export const {
   titles,
   BASEURL,
   contactAPI,
+  repo,
   email,
   telegram,
   CVLink,

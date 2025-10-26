@@ -12,7 +12,6 @@ type Props = { nav: navlink[] };
 export default function Header({ nav }: Props) {
   const pathname = usePathname();
   const [drawerState, setDrawerState] = useState(false);
-  const [theme, setTheme] = useState('dark');
   const [activeLink, setActiveLink] = useState(pathname);
   const [underlinePos, setUnderlinePos] = useState({ left: 0, width: 0 });
 
@@ -93,7 +92,7 @@ export default function Header({ nav }: Props) {
           />
         </nav>
         <div>
-          <ToggleDarkMode theme={theme} setTheme={setTheme} />
+          <ToggleDarkMode />
         </div>
       </motion.header>
 
@@ -107,7 +106,7 @@ export default function Header({ nav }: Props) {
         </div>
       </div>
       <div className='fixed top-0 right-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
-        <ToggleDarkMode theme={theme} setTheme={setTheme} />
+        <ToggleDarkMode />
       </div>
       <motion.header className='text-foreground flex justify-end md:hidden'>
         <AnimatePresence>

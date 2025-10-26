@@ -1,5 +1,6 @@
-import { getPostList, grayMatterData, readPost } from '@/lib/posts';
-
+import { getPostList, readPost } from '@/lib/posts';
+import { repo } from '@/app/lib/loadBase';
+import Comments from '@/app/ui/components/Comments';
 export default async function BlogPost({
   params,
 }: {
@@ -35,6 +36,7 @@ export default async function BlogPost({
           })}
         </ul>
       </div>
+      <Comments repo={repo} type='pathname' />
     </article>
   );
 }
