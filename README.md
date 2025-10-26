@@ -1,15 +1,24 @@
 # Personal Portfolio
 
-This is a dynamic personal portfolio built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/), and [React Icons](https://react-icons.github.io/react-icons/). The contents of the portfolio are fully customizable via the `/data` folder, and colors can be modified using CSS variables defined in `global.css`.
+> Live Demo: [MohsenFaraj.ir](https://mohsenfaraj.ir)
+
+This is a dynamic personal portfolio blog built with [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and [Framer Motion](https://www.framer.com/motion/). The contents of the portfolio is fully customizable via the `/data` folder or you could use [DecapCMS](https://decapcms.org) at `/admin` route.
+
+this project is configured to work with cloudflare workers.
+
+colors can be modified using CSS variables defined in `global.css`.
 
 ## Features
 
-- Dynamic content management via JSON files in `/data`
+- Dynamic content management via Decap CMS `/admin` route or `/data` folder
+- Free hosting with deploying to cloudflare workers
 - Smooth animations powered by Framer Motion
-- Icons from React Icons
+- Icons from Font Awesome and Devicons
 - Responsive and customizable design with Tailwind CSS
 - Light/Dark mode support (via CSS variables)
+- sending comments using github issues thanks to [utterances](https://utteranc.es/)
 - Simple and modular structure for easy customization
+- proper typography and code highlighting for blog pages
 
 ## Table of Contents
 
@@ -28,13 +37,13 @@ To get started with this portfolio, clone the repository and install the necessa
 ```bash
 git clone https://github.com/mohsenfaraj/portfolio.git
 cd portfolio
-npm install
+pnpm install
 ```
 
-Make sure to install [pnpm](https://pnpm.io) if you prefer to use it:
+I use pnpm package manager (faster, better handling of dependencies). for installing pnpm:
 
 ```bash
-pnpm install
+npm install -g pnpm
 ```
 
 ### Development
@@ -42,8 +51,6 @@ pnpm install
 To run the development server:
 
 ```bash
-npm run dev
-# or
 pnpm run dev
 ```
 
@@ -53,7 +60,7 @@ Then, open [http://localhost:3000](http://localhost:3000) in your browser to see
 
 ### Content
 
-All portfolio content is dynamically managed through the `/data` folder. Modify the JSON files in that folder to update sections like "About Me", "Skills", and "Experience".
+All portfolio content is dynamically managed through the `/data` folder. Modify the yaml files in that folder to update sections like "About Me", "Skills", and "Experience".
 
 For example, to update the skills section:
 
@@ -68,17 +75,7 @@ For example, to update the skills section:
 
 ### Colors
 
-Colors are managed through CSS variables defined in `global.css`. You can customize primary, secondary, and background colors by editing the following variables:
-
-```css
-:root {
-  --background: #ffffff;
-  --foreground: #353535;
-  --primary: #e46400;
-  --secondary: #e41700;
-  --bars: #ddd;
-}
-```
+Colors are managed through CSS variables defined in `/app/css/global.css`. You can customize primary, secondary, and background colors by editing the following variables:
 
 ### Light/Dark Mode
 
@@ -96,18 +93,14 @@ By default, the portfolio includes support for light and dark modes. you can use
 
 ## Available Scripts
 
-- `npm run dev` or `pnpm run dev`: Starts the development server.
-- `npm run build` or `pnpm run build`: Builds the application for production.
+- `pnpm run dev`: Starts the development server.
+- `pnpm run build`: Builds the application for production.
 - `npm start`: Runs the production build.
+- `pnpm format`: Formats the package with prettier
 
 ## Deployment
 
-This portfolio can be easily deployed on platforms like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/).
-
-To deploy with Vercel:
-
-1. Push your code to GitHub.
-2. Go to [vercel.com](https://vercel.com/), import the repository, and deploy.
+This portfolio can be easily deployed on Cloudflare. you can deploy to other services like Netlify or Vercel but you should configure DecapCMS.
 
 ## License
 
