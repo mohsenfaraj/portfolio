@@ -19,6 +19,16 @@ projects:
       - web
       - next
       - tools
+  - name: Hamyar Dars
+    short: a tool for checking educational progress in CE major at Urmia university
+      of technology with the ability to auto check all the passed lectures.
+      created using next and tailwind with csv files as input.
+    image: /images/hamyardars.png
+    link: https://dars.codegeeks.ir
+    tags:
+      - web
+      - next
+      - tailwind
   - name: On-time
     short: a React pwa project to track and calculate the remaining time of our
       university's next bus stop that is defined in a json file. this project
