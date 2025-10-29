@@ -1,5 +1,4 @@
 'use client';
-import useTheme from '@/app/hooks/theme';
 import React, { useEffect, useRef, useState } from 'react';
 
 const validTypeList = [
@@ -64,7 +63,6 @@ const Comments: React.FC<CommentsProps> = ({
   issueNumber,
   debug,
 }) => {
-  const { theme } = useTheme();
   const myRef = useRef<HTMLDivElement>(null);
   const [pending, setPending] = useState(true);
 
@@ -90,7 +88,8 @@ const Comments: React.FC<CommentsProps> = ({
     if (!attrName || value === undefined || !myRef.current) return;
 
     // get theme
-    const CommentTheme = theme == 'light' ? 'github-light' : 'github-dark';
+    const CommentTheme =
+      localStorage.getItem('theme') == 'light' ? 'github-light' : 'github-dark';
     const scriptEl = document.createElement('script');
     scriptEl.src = 'https://utteranc.es/client.js';
     scriptEl.async = true;
