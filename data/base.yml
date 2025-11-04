@@ -1,3 +1,6 @@
+telegram: "@MohsenFaraj"
+CVLink: /images/resume.pdf
+repo: mohsenfaraj/portfolio
 fullname: Mohsen Farajollahi
 description: Mohsen Farajollahi, A Programmer|Web Developer's Personal Webpage
 titles:
@@ -5,9 +8,6 @@ titles:
   - IoT enthusiast
   - Blogger
   - Programmer
-BASEURL: 'https://mohsenfaraj.ir'
-contactAPI: 'https://portfolio-contact.gmohsenfarajollahi4657.workers.dev/'
-repo: mohsenfaraj/portfolio
-email: 'contact@mohsenfaraj.ir'
-telegram: '@MohsenFaraj'
-CVLink: '#'
+BASEURL: https://mohsenfaraj.ir
+contactAPI: https://portfolio-contact.gmohsenfarajollahi4657.workers.dev/
+email: contact@mohsenfaraj.ir
