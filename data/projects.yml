@@ -13,8 +13,8 @@ projects:
       a React pwa project built with tailwind and framer motion to track and
       calculate the remaining time of our university's next bus stop that is
       defined in excel files. works offline and has dark mode.
-    image: /images/ontime.png
-    link: https://mohsenfaraj.github.io/on-time
+    image: /images/ontime.webp
+    link: https://bus.codegeeks.ir
     tags:
       - web
       - react
