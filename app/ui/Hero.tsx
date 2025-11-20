@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { topToBottom, leftToRight, rightToLeft } from './Animations';
 import Link from 'next/link';
 import { link } from '../lib/loadSocials';
+import Icon from './components/Icon';
 
 type Props = {
   socials: link[];
@@ -71,7 +72,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
                   target='_blank'
                   key={social.name}
                 >
-                  <i className={'fa ' + social.icon}></i>
+                  <Icon name={social.icon} />
                 </a>
               );
             })}
@@ -96,6 +97,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
       >
         <Image
           priority={true}
+          fetchPriority='high'
           src='/images/transparent.webp'
           alt='profile picture'
           height={400}

@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { topToBottom } from '@/app/ui/Animations';
 import { card } from '../lib/loadAbout';
+import Icon from './components/Icon';
 
 type Props = { cards: card[] };
 
@@ -46,12 +47,13 @@ const About = ({ cards }: Props) => {
                 }}
               >
                 {
-                  <i
+                  <div
                     className={
-                      'fa fa-5x absolute top-1/2 left-8 z-0 -translate-y-1/2 text-zinc-200 dark:text-[#353535] ' +
-                      card.icon
+                      'absolute top-1/2 left-8 z-0 -translate-y-1/2 text-zinc-200 dark:text-[#353535]'
                     }
-                  />
+                  >
+                    <Icon name={card.icon} size={100} />
+                  </div>
                 }
                 <div className='relative z-20'>
                   <h3 className='from-primary to-secondary inline-block items-center gap-2 bg-linear-to-r bg-clip-text text-2xl font-bold text-transparent shadow-black'>

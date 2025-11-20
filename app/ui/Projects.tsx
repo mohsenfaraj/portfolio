@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { topToBottom } from './Animations';
 import Button from './components/button';
 import clsx from 'clsx';
+import { ImageIcon, Link } from 'lucide-react';
 
 type projects = {
   name: string;
@@ -126,7 +127,7 @@ const Projects = ({ categories, projects }: Props) => {
                       className='rounded-2xl'
                     />
                   )}
-                  {!item.image && <i className='fa fa-image' />}
+                  <ImageIcon size={48} />
                 </div>
                 <div className='flex grow flex-col overflow-hidden p-5'>
                   <h2 className='text-primary inline-flex items-center gap-2 text-xl font-bold'>
@@ -141,7 +142,7 @@ const Projects = ({ categories, projects }: Props) => {
                       target='_blank'
                       className='flex items-center gap-1'
                     >
-                      <i className='fa fa-link'></i> link
+                      <Link /> link
                     </a>
                   </div>
                   <div className='flex min-h-7 items-center gap-2'>

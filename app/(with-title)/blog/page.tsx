@@ -1,4 +1,5 @@
 import { getSortedPostsData } from '@/lib/posts';
+import { Calendar, Tags } from 'lucide-react';
 import Link from 'next/link';
 
 type Props = {};
@@ -18,16 +19,15 @@ const Blog = (props: Props) => {
               <h2 className='text-primary text-2xl'>
                 <Link href={'/blog/' + item.id}>{item.title}</Link>
               </h2>
-              <p className='mt-2 text-sm text-zinc-500'>
-                <i className='fa fa-calendar' /> &nbsp;
+              <p className='mt-2 text-sm text-zinc-500 flex gap-2 items-center'>
+                <Calendar size={18}/>
                 {item.date}
               </p>
               <p className='mt-3'>{item.summary}</p>
-              <div className='flex items-baseline gap-4'>
-                <span className='rounded border border-zinc-500 bg-zinc-100 p-1 text-sm text-zinc-500 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-400'>
-                  <i className='fa fa-tags' /> tags:
+                <ul className='mt-5 flex gap-2 items-center'>
+                <span className='rounded border border-zinc-500 bg-zinc-100 p-1 text-sm text-zinc-500 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-400 flex gap-2'>
+                  <Tags size={18}/> tags:
                 </span>
-                <ul className='mt-5 flex gap-2'>
                   {item.tags.map((tag) => {
                     return (
                       <li
@@ -40,7 +40,6 @@ const Blog = (props: Props) => {
                   })}
                 </ul>
               </div>
-            </div>
           );
         })}
       </section>

@@ -13,7 +13,7 @@ colors can be modified using CSS variables defined in `global.css`.
 - Dynamic content management via Decap CMS `/admin` route or `/data` folder
 - Free hosting with deploying to cloudflare workers
 - Smooth animations powered by Framer Motion
-- Icons from Font Awesome and Devicons
+- Dynamic icon loading from Lucide React and SimpleIcons
 - Responsive and customizable design with Tailwind CSS
 - Light/Dark mode support (via CSS variables)
 - sending comments using github issues thanks to [utterances](https://utteranc.es/)
@@ -22,13 +22,18 @@ colors can be modified using CSS variables defined in `global.css`.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Customization](#customization)
-  - [Content](#content)
-  - [Colors](#colors)
-- [Available Scripts](#available-scripts)
-- [Deployment](#deployment)
-- [License](#license)
+- [Personal Portfolio](#personal-portfolio)
+  - [Features](#features)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+    - [Development](#development)
+  - [Customization](#customization)
+    - [Content](#content)
+    - [Colors](#colors)
+    - [Light/Dark Mode](#lightdark-mode)
+  - [Available Scripts](#available-scripts)
+  - [Deployment](#deployment)
+  - [License](#license)
 
 ## Installation
 

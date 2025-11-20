@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ToggleDarkMode from './components/ToggleDarkMode';
 import { navlink } from '../lib/loadNav';
+import { Menu, X } from 'lucide-react';
 
 type Props = { nav: navlink[] };
 
@@ -102,7 +103,7 @@ export default function Header({ nav }: Props) {
           className='dark:text-foreground flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-zinc-100 p-3 text-lg text-zinc-600 dark:bg-zinc-800'
           onClick={() => handleDrawer(true)}
         >
-          <i className='fa fa-bars'></i>
+          <Menu />
         </div>
       </div>
       <div className='fixed top-0 right-0 z-50 m-5 cursor-pointer text-xl md:hidden'>
@@ -134,7 +135,7 @@ export default function Header({ nav }: Props) {
                 animate={{ opacity: 1, transition: { duration: 0.5 } }}
                 exit={{ opacity: 0, transition: { duration: 0.3 } }}
               >
-                <i className='fa fa-times'></i> &nbsp; close
+                <X /> &nbsp; close
               </motion.span>
 
               {nav.map((item, index) => {

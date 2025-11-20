@@ -2,6 +2,7 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { topToBottom } from '@/app/ui/Animations';
+import { Mail, Send } from 'lucide-react';
 type Props = {
   contactAPI: string;
   email: string;
@@ -75,11 +76,11 @@ const Contact = ({ contactAPI, email, telegram }: Props) => {
         transition={{ delay: 0.5 }}
       >
         <div className='flex items-center gap-2'>
-          <i className='fa fa-envelope'></i>
+          <Mail />
           {email}
         </div>
         <div className='flex items-center gap-2'>
-          <i className='fa fa-telegram'></i> {telegram}
+          <Send /> {telegram}
         </div>
       </motion.div>
 

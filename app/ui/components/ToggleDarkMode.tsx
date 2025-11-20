@@ -1,6 +1,7 @@
 'use client';
 import useTheme from '@/app/hooks/theme';
 import { motion } from 'framer-motion';
+import { Moon, Sun } from 'lucide-react';
 
 const ToggleDarkMode = () => {
   const { theme, toggleTheme } = useTheme();
@@ -17,7 +18,7 @@ const ToggleDarkMode = () => {
           exit={{ rotate: 90, scale: 0.5 }} // Exit animation when toggling to moon
           transition={{ duration: 0.5 }}
         >
-          <i className='fa fa-sun-o'></i>
+          <Sun />
         </motion.div>
       ) : (
         <motion.div
@@ -27,7 +28,7 @@ const ToggleDarkMode = () => {
           exit={{ rotate: -90, scale: 0.5 }} // Exit animation when toggling to sun
           transition={{ duration: 0.5 }}
         >
-          <i className='fa fa-moon-o'></i>
+          <Moon />
         </motion.div>
       )}
     </div>

@@ -1,48 +1,48 @@
 skills:
   - name: HTML
     percentage: 100
-    icon: devicon-html5-plain
+    icon: html5
 
   - name: CSS
     percentage: 95
-    icon: devicon-css3-plain
+    icon: css
 
   - name: JavaScript
     percentage: 90
-    icon: devicon-javascript-plain
+    icon: javascript
 
   - name: React
     percentage: 80
-    icon: devicon-react-plain
+    icon: react
 
   - name: Tailwind
     percentage: 80
-    icon: devicon-tailwindcss-original
+    icon: tailwindcss
 
   - name: Next.js
     percentage: 70
-    icon: devicon-nextjs-plain
+    icon: nextdotjs
 
   - name: Express
     percentage: 65
-    icon: devicon-express-original
+    icon: express
 
   - name: MySql
     percentage: 65
-    icon: devicon-mysql-original
+    icon: mysql
 
   - name: Docker
     percentage: 60
-    icon: devicon-docker-plain
+    icon: docker
 
   - name: Java
     percentage: 60
-    icon: devicon-java-plain
+    icon: openjdk
 
   - name: Linux
     percentage: 50
-    icon: devicon-linux-plain
+    icon: linux
 
   - name: PHP
     percentage: 30
-    icon: devicon-php-plain
+    icon: php

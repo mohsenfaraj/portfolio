@@ -41,15 +41,6 @@ projects:
       - web
       - next
       - tailwind
-  - name: On-time
-    short: a React pwa project to track and calculate the remaining time of our
-      university's next bus stop that is defined in a json file. this project
-      even works in offline mode.
-    image: /images/ontime.webp
-    link: https://mohsenfaraj.github.io/on-time
-    tags:
-      - web
-      - react
   - name: Ghaza Yad
     short:
       this service sends a web push notification every wednesday to students

@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import './css/globals.css';
-import './css/font-awesome.min.css';
-import '@/app/css/github-dark.min.css';
 import Header from './ui/header';
 import { Inter } from 'next/font/google';
 import { Saira_Stencil_One } from 'next/font/google';

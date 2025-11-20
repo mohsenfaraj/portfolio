@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { topToBottom } from './Animations';
 import { useState } from 'react';
 import { skill } from '../lib/loadSkills';
-import '@/app/css/devicon.min.css';
+import Icon from './components/Icon';
 type Props = { skills: skill[] };
 
 const Skills = ({ skills }: Props) => {
@@ -62,7 +62,7 @@ const Skills = ({ skills }: Props) => {
               </defs>
             </motion.svg>
             <div className='text-primary absolute inset-0 flex items-center justify-center text-3xl'>
-              <i className={skill.icon}></i>
+              <Icon name={skill.icon} size={32}/>
             </div>
           </div>
           <div className='mt-2 text-center'>

@@ -1,24 +1,24 @@
 socials:
   - name: github
     link: https://github.com/mohsenfaraj
-    icon: fa-github
+    icon: Github
 
   - name: linkedin
     link: https://www.linkedin.com/in/mohsenfaraj
-    icon: fa-linkedin
+    icon: Linkedin
 
   - name: instagram
     link: https://instagram.com/mohsenfarajig
-    icon: fa-instagram
+    icon: Instagram
 
   - name: telegram
     link: https://telegram.me/mohsenfaraj
-    icon: fa-telegram
+    icon: Send
 
   - name: weblog
     link: https://chortak.blog.ir
-    icon: fa-quote-right
+    icon: Feather
 
   - name: Gmail
     link: mailto:contact@mohsenfaraj.ir
-    icon: fa-envelope
+    icon: AtSign
