@@ -96,7 +96,7 @@ const Hero = ({ socials, titles, fullname, CVLink }: Props) => {
       >
         <Image
           priority={true}
-          src='/images/transparent.png'
+          src='/images/transparent.webp'
           alt='profile picture'
           height={400}
           width={400}

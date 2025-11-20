@@ -3,13 +3,14 @@ projects:
     short: Personal portfolio website created using Next, TailwindCSS and Framer
       Motion. all the data are dynamic and easilly customizable from the data
       folder or using Decap CMS Hosted Freely on Cloudflare pages and Github.
-    image: /images/portfolio.png
+    image: /images/portfolio.webp
     link: https://github.com/mohsenfaraj/portfolio
     tags:
       - web
       - next
   - name: On-time
-    short: a React pwa project built with tailwind and framer motion to track and
+    short:
+      a React pwa project built with tailwind and framer motion to track and
       calculate the remaining time of our university's next bus stop that is
       defined in excel files. works offline and has dark mode.
     image: /images/ontime.png
@@ -18,31 +19,43 @@ projects:
       - web
       - react
   - name: Hamyar Vahed
-    short: a next.js project for scrapping lectures data from our university website
+    short:
+      a next.js project for scrapping lectures data from our university website
       (edu.uut.ac.ir) and display as a system where students could easily pick
       lectures, check lecture time and exam collide and get exams and weekly
       schedule
-    image: /images/hamyar.png
+    image: /images/hamyar.webp
     link: https://hamyar.codegeeks.ir
     tags:
       - web
       - next
       - tools
   - name: Hamyar Dars
-    short: a tool for checking educational progress in CE major at Urmia university
+    short:
+      a tool for checking educational progress in CE major at Urmia university
       of technology with the ability to auto check all the passed lectures.
       created using next and tailwind with csv files as input.
-    image: /images/hamyardars.png
+    image: /images/hamyardars.webp
     link: https://dars.codegeeks.ir
     tags:
       - web
       - next
       - tailwind
+  - name: On-time
+    short: a React pwa project to track and calculate the remaining time of our
+      university's next bus stop that is defined in a json file. this project
+      even works in offline mode.
+    image: /images/ontime.webp
+    link: https://mohsenfaraj.github.io/on-time
+    tags:
+      - web
+      - react
   - name: Ghaza Yad
-    short: this service sends a web push notification every wednesday to students
+    short:
+      this service sends a web push notification every wednesday to students
       for reminding to reserve the food for next week. I've used cloudflare
       workers for handling and sending push notifications.
-    image: /images/ghazayad.png
+    image: /images/ghazayad.webp
     link: https://food.codegeeks.ir
     tags:
       - web
@@ -52,7 +65,7 @@ projects:
       express.js, mysql and ejs for creating a website like imdb. this is not a
       finished project but it has a lot of features like liking, commenting,
       search by director and etc
-    image: ""
+    image: ''
     link: https://github.com/mohsenfaraj/imdb.js
     tags:
       - web
@@ -63,7 +76,7 @@ projects:
     short: smart english-persian and vice versa dictionary built using Java and
       JavaFx. has features like word suggestion, quick translate based on input
       language, always on-top and more with a fantastic UI.
-    image: /images/zendic.png
+    image: /images/zendic.webp
     link: https://github.com/mohsenfaraj/ZenDic
     tags:
       - java
@@ -71,9 +84,10 @@ projects:
       - desktop
       - university
   - name: ZenBook
-    short: Zenix Phone Book (ZenBook) is a simple contact manager built using java
+    short:
+      Zenix Phone Book (ZenBook) is a simple contact manager built using java
       and javaFX
-    image: /images/zenbook.png
+    image: /images/zenbook.webp
     link: https://github.com/mohsenfaraj/ZenBook
     tags:
       - java
@@ -82,12 +96,13 @@ projects:
       - university
   - name: Frootan blog.ir template
     short: a minimalist optimized template for blog.ir
-    image: /images/frootan.png
+    image: /images/frootan.webp
     link: https://github.com/mohsenfaraj/Frootan
     tags:
       - web
   - name: Pure CSS slider creator
-    short: a tool for creating pure css responsive sliders. i created this tool for
+    short:
+      a tool for creating pure css responsive sliders. i created this tool for
       bloggers of blog.ir had restrictions on javascript.
     link: https://github.com/mohsenfaraj/pureCssSlider
     tags:
@@ -100,7 +115,8 @@ projects:
       - web
       - tools
   - name: Flash card maker
-    short: a simple JS app that gets pair of words and ask the user about the words
+    short:
+      a simple JS app that gets pair of words and ask the user about the words
       like flashcard. this was my first proper js project.
     link: https://github.com/mohsenfaraj/FlashcardMaker-fa
     tags:
@@ -114,7 +130,8 @@ projects:
       - university
       - python
   - name: AzmoonYaar
-    short: final project for web development using JQuery and bootstrap. with this
+    short:
+      final project for web development using JQuery and bootstrap. with this
       tool you could participate at pre-defined json exams and test your
       knowledge.
     link: https://github.com/mohsenfaraj/AzmoonYaar
@@ -123,7 +140,8 @@ projects:
       - university
       - tools
   - name: tasktracker
-    short: a simple fullstack task tracker app using MERN stack and Docker. this was
+    short:
+      a simple fullstack task tracker app using MERN stack and Docker. this was
       a university project
     link: https://github.com/mohsenfaraj/tasktracker
     tags:
