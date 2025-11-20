@@ -8,6 +8,15 @@ projects:
     tags:
       - web
       - next
+  - name: On-time
+    short: a React pwa project built with tailwind and framer motion to track and
+      calculate the remaining time of our university's next bus stop that is
+      defined in excel files. works offline and has dark mode.
+    image: /images/ontime.png
+    link: https://mohsenfaraj.github.io/on-time
+    tags:
+      - web
+      - react
   - name: Hamyar Vahed
     short: a next.js project for scrapping lectures data from our university website
       (edu.uut.ac.ir) and display as a system where students could easily pick
@@ -29,15 +38,6 @@ projects:
       - web
       - next
       - tailwind
-  - name: On-time
-    short: a React pwa project to track and calculate the remaining time of our
-      university's next bus stop that is defined in a json file. this project
-      even works in offline mode.
-    image: /images/ontime.png
-    link: https://mohsenfaraj.github.io/on-time
-    tags:
-      - web
-      - react
   - name: Ghaza Yad
     short: this service sends a web push notification every wednesday to students
       for reminding to reserve the food for next week. I've used cloudflare
